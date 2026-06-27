@@ -1,154 +1,286 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta
     name="description"
     content="Portfolio website for William Moore, a Computer Science senior focused on software engineering, full-stack development, SQL/data analysis, and AI fundamentals."
-  />
+  >
 
   <title>William Moore | Portfolio</title>
 
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header class="site-header">
-    <nav class="nav">
-      <a class="logo" href="#top">William Moore</a>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
 
-      <div class="nav-links" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#resume">Resume</a>
-        <a href="#contact">Contact</a>
+  <style>
+    body {
+      background: #050505;
+    }
+
+    .navbar {
+      background: rgba(5, 5, 5, 0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .hero {
+      min-height: 78vh;
+      display: flex;
+      align-items: center;
+      padding-top: 6rem;
+      padding-bottom: 5rem;
+    }
+
+    .text-accent {
+      color: #60a5fa;
+    }
+
+    .section {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .project-card {
+      height: 100%;
+      background: #111111;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .project-card:hover {
+      border-color: #60a5fa;
+    }
+
+    .muted-readable {
+      color: #cbd5e1;
+    }
+
+    .small-muted {
+      color: #94a3b8;
+    }
+
+    .btn-outline-light:hover {
+      color: #050505;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#top">William Moore</a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNav"
+        aria-controls="mainNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#projects">Projects</a>
+          <a class="nav-link" href="#resume">Resume</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </div>
       </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
 
   <main id="top">
     <section class="hero">
-      <p class="eyebrow">Computer Science Senior</p>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 col-xl-8">
+            <p class="text-accent fw-bold text-uppercase letter-spacing mb-3">
+              Computer Science Senior
+            </p>
 
-      <h1>Building across software, data, and full-stack development.</h1>
+            <h1 class="display-2 fw-bold lh-1 mb-4">
+              Building across software, data, and full-stack development.
+            </h1>
 
-      <p class="hero-text">
-        I’m William Moore, a Computer Science student at UNC Greensboro focused on
-        software engineering, SQL/data analysis, full-stack development, and AI fundamentals.
-        This site is hand-built by me and will keep improving as my projects grow.
-      </p>
+            <p class="lead muted-readable mb-4">
+              I’m William Moore, a Computer Science student at UNC Greensboro focused on
+              software engineering, SQL/data analysis, full-stack development, and AI fundamentals.
+              This site is hand-built by me and will keep improving as my projects grow.
+            </p>
 
-      <div class="hero-buttons">
-        <a class="button primary" href="resume.pdf" target="_blank" rel="noopener noreferrer">
-          View Resume
-        </a>
-        <a class="button secondary" href="https://github.com/Wjmoore32001" target="_blank" rel="noopener noreferrer">
-          GitHub
-        </a>
-        <a class="button secondary" href="mailto:WilliamJMooreIIICareer@proton.me">
-          Email Me
-        </a>
+            <div class="d-flex flex-wrap gap-3">
+              <a class="btn btn-primary btn-lg fw-bold" href="resume.pdf" target="_blank" rel="noopener noreferrer">
+                View Resume
+              </a>
+
+              <a class="btn btn-outline-light btn-lg fw-bold" href="https://github.com/Wjmoore32001" target="_blank" rel="noopener noreferrer">
+                GitHub
+              </a>
+
+              <a class="btn btn-outline-light btn-lg fw-bold" href="mailto:WilliamJMooreIIICareer@proton.me">
+                Email Me
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="about" class="section">
-      <h2>About</h2>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9">
+            <h2 class="fw-bold mb-4">About</h2>
 
-      <p>
-        I’m currently working toward becoming the kind of developer who can learn quickly,
-        solve real problems, and build useful things from the ground up. My current focus is
-        on Java, Python, C/C++, SQL, PostgreSQL, Git, Linux, data structures, algorithms,
-        full-stack development, and data analysis.
-      </p>
+            <p class="muted-readable">
+              I’m currently working toward becoming the kind of developer who can learn quickly,
+              solve real problems, and build useful things from the ground up. My current focus is on
+              Java, Python, C/C++, SQL, PostgreSQL, Git, Linux, data structures, algorithms,
+              full-stack development, and data analysis.
+            </p>
 
-      <p>
-        I’m especially interested in the overlap between software engineering, databases,
-        data analysis, and AI. I care about understanding how systems work, not just getting
-        something to work once.
-      </p>
+            <p class="muted-readable">
+              I’m especially interested in the overlap between software engineering, databases,
+              data analysis, and AI. I care about understanding how systems work, not just getting
+              something to work once.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="projects" class="section">
-      <h2>Projects & Work in Progress</h2>
+      <div class="container">
+        <h2 class="fw-bold mb-4">Projects & Work in Progress</h2>
 
-      <div class="project-grid">
-        <article class="project-card">
-          <p class="project-label">Featured Project</p>
-          <h3>Portfolio Website</h3>
-          <p>
-            This website was built from scratch using HTML and CSS, deployed through
-            Cloudflare Pages, and connected to a custom domain.
-          </p>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="card project-card">
+              <div class="card-body d-flex flex-column">
+                <p class="text-accent fw-bold text-uppercase small mb-2">Featured Project</p>
 
-          <div class="project-links">
-            <a href="https://github.com/Wjmoore32001/portfolio-site" target="_blank" rel="noopener noreferrer">
-              View Source
-            </a>
+                <h3 class="h4 fw-bold">Portfolio Website</h3>
+
+                <p class="muted-readable">
+                  This website was built from scratch using HTML and Bootstrap, deployed through
+                  Cloudflare Pages, and connected to a custom domain.
+                </p>
+
+                <div class="mt-auto">
+                  <a class="fw-bold text-accent" href="https://github.com/Wjmoore32001/portfolio-site" target="_blank" rel="noopener noreferrer">
+                    View Source
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
-        </article>
 
-        <article class="project-card">
-          <p class="project-label">In Development</p>
-          <h3>EzyReadComics</h3>
-          <p>
-            A Django and PostgreSQL web application focused on organizing comic reading
-            orders and developing a “current reading era” recommendation/reading-map algorithm.
-          </p>
+          <div class="col-md-6 col-lg-4">
+            <div class="card project-card">
+              <div class="card-body d-flex flex-column">
+                <p class="text-accent fw-bold text-uppercase small mb-2">In Development</p>
 
-          <p class="project-note">
-            This project is currently being built and will be linked when it is ready to share.
-          </p>
-        </article>
+                <h3 class="h4 fw-bold">EzyReadComics</h3>
 
-        <article class="project-card">
-          <p class="project-label">Data Analysis</p>
-          <h3>Global Career Accelerator Projects</h3>
-          <p>
-            SQL and data analysis milestones focused on sustainability impact, product analytics,
-            construction job demand, and public transit ridership patterns.
-          </p>
+                <p class="muted-readable">
+                  A Django and PostgreSQL web application focused on organizing comic reading
+                  orders and developing a “current reading era” recommendation/reading-map algorithm.
+                </p>
 
-          <p class="project-note">
-            Featured project PDFs are available on my LinkedIn profile. Dedicated case study pages
-            will be added here later.
-          </p>
-        </article>
+                <p class="small-muted mt-auto mb-0">
+                  This project is currently being built and will be linked when it is ready to share.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card project-card">
+              <div class="card-body d-flex flex-column">
+                <p class="text-accent fw-bold text-uppercase small mb-2">Data Analysis</p>
+
+                <h3 class="h4 fw-bold">Global Career Accelerator Projects</h3>
+
+                <p class="muted-readable">
+                  SQL and data analysis milestones focused on sustainability impact, product analytics,
+                  construction job demand, and public transit ridership patterns.
+                </p>
+
+                <p class="small-muted mt-auto mb-0">
+                  Featured project PDFs are available on my LinkedIn profile. Dedicated case study pages
+                  will be added here later.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="resume" class="section">
-      <h2>Resume</h2>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9">
+            <h2 class="fw-bold mb-4">Resume</h2>
 
-      <p>
-        My resume includes my Computer Science coursework, technical skills, project work,
-        Global Career Accelerator data analysis experience, and previous work experience.
-      </p>
+            <p class="muted-readable">
+              My resume includes my Computer Science coursework, technical skills, project work,
+              Global Career Accelerator data analysis experience, and previous work experience.
+            </p>
 
-      <div class="section-actions">
-        <a class="button primary" href="resume.pdf" target="_blank" rel="noopener noreferrer">
-          Open Resume PDF
-        </a>
+            <a class="btn btn-primary btn-lg fw-bold mt-2" href="resume.pdf" target="_blank" rel="noopener noreferrer">
+              Open Resume PDF
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="contact" class="section">
-      <h2>Contact</h2>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9">
+            <h2 class="fw-bold mb-4">Contact</h2>
 
-      <p>
-        I’m currently looking for internships, entry-level opportunities, and projects where I can
-        keep growing as a developer and contribute to real technical work.
-      </p>
+            <p class="muted-readable">
+              I’m currently looking for internships, entry-level opportunities, and projects where I can
+              keep growing as a developer and contribute to real technical work.
+            </p>
 
-      <div class="contact-links">
-        <a href="mailto:WilliamJMooreIIICareer@proton.me">Email</a>
-        <a href="https://github.com/Wjmoore32001" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+            <div class="d-flex flex-wrap gap-3 mt-3">
+              <a class="btn btn-outline-light fw-bold" href="mailto:WilliamJMooreIIICareer@proton.me">
+                Email
+              </a>
+
+              <a class="btn btn-outline-light fw-bold" href="https://github.com/Wjmoore32001" target="_blank" rel="noopener noreferrer">
+                GitHub
+              </a>
+
+              <a class="btn btn-outline-light fw-bold" href="resume.pdf" target="_blank" rel="noopener noreferrer">
+                Resume
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <p>Built by William Moore with HTML and CSS.</p>
+  <footer class="py-4 border-top border-secondary-subtle">
+    <div class="container">
+      <p class="small-muted mb-0">
+        Built by William Moore with HTML and Bootstrap.
+      </p>
+    </div>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
