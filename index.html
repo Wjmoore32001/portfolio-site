@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="Personal portfolio website for William Moore, computer science student and aspiring software developer."
+    content="Portfolio website for William Moore, a Computer Science senior focused on software engineering, full-stack development, SQL/data analysis, and AI fundamentals."
   />
 
   <title>William Moore | Portfolio</title>
@@ -15,9 +15,9 @@
 <body>
   <header class="site-header">
     <nav class="nav">
-      <a class="logo" href="#">William Moore</a>
+      <a class="logo" href="#top">William Moore</a>
 
-      <div class="nav-links">
+      <div class="nav-links" aria-label="Main navigation">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#resume">Resume</a>
@@ -26,20 +26,28 @@
     </nav>
   </header>
 
-  <main>
+  <main id="top">
     <section class="hero">
-      <p class="eyebrow">Computer Science Student</p>
+      <p class="eyebrow">Computer Science Senior</p>
 
-      <h1>Hi, I’m William Moore.</h1>
+      <h1>Building across software, data, and full-stack development.</h1>
 
       <p class="hero-text">
-        I’m building my foundation in software development, AI, databases, and web applications.
-        This site is a work in progress and was built by me from scratch.
+        I’m William Moore, a Computer Science student at UNC Greensboro focused on
+        software engineering, SQL/data analysis, full-stack development, and AI fundamentals.
+        This site is hand-built by me and will keep improving as my projects grow.
       </p>
 
       <div class="hero-buttons">
-        <a class="button primary" href="#projects">View Projects</a>
-        <a class="button secondary" href="#contact">Contact Me</a>
+        <a class="button primary" href="resume.pdf" target="_blank" rel="noopener noreferrer">
+          View Resume
+        </a>
+        <a class="button secondary" href="https://github.com/Wjmoore32001" target="_blank" rel="noopener noreferrer">
+          GitHub
+        </a>
+        <a class="button secondary" href="mailto:WilliamJMooreIIICareer@proton.me">
+          Email Me
+        </a>
       </div>
     </section>
 
@@ -47,37 +55,62 @@
       <h2>About</h2>
 
       <p>
-        I’m a computer science student working on building stronger technical skills through
-        coursework, personal projects, and hands-on development. I’m especially interested in
-        software engineering, AI, data, and building useful applications.
+        I’m currently working toward becoming the kind of developer who can learn quickly,
+        solve real problems, and build useful things from the ground up. My current focus is
+        on Java, Python, C/C++, SQL, PostgreSQL, Git, Linux, data structures, algorithms,
+        full-stack development, and data analysis.
+      </p>
+
+      <p>
+        I’m especially interested in the overlap between software engineering, databases,
+        data analysis, and AI. I care about understanding how systems work, not just getting
+        something to work once.
       </p>
     </section>
 
     <section id="projects" class="section">
-      <h2>Projects</h2>
+      <h2>Projects & Work in Progress</h2>
 
       <div class="project-grid">
         <article class="project-card">
-          <h3>EzyReadComics</h3>
-          <p>
-            A Django and PostgreSQL project focused on organizing comic reading orders and
-            building a current reading era algorithm.
-          </p>
-        </article>
-
-        <article class="project-card">
+          <p class="project-label">Featured Project</p>
           <h3>Portfolio Website</h3>
           <p>
-            This website was built from scratch using HTML and CSS, deployed through Cloudflare
-            Pages, and connected to a custom domain.
+            This website was built from scratch using HTML and CSS, deployed through
+            Cloudflare Pages, and connected to a custom domain.
+          </p>
+
+          <div class="project-links">
+            <a href="https://github.com/Wjmoore32001/portfolio-site" target="_blank" rel="noopener noreferrer">
+              View Source
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <p class="project-label">In Development</p>
+          <h3>EzyReadComics</h3>
+          <p>
+            A Django and PostgreSQL web application focused on organizing comic reading
+            orders and developing a “current reading era” recommendation/reading-map algorithm.
+          </p>
+
+          <p class="project-note">
+            This project is currently being built and will be linked when it is ready to share.
           </p>
         </article>
 
         <article class="project-card">
-          <h3>More Coming Soon</h3>
+          <p class="project-label">Data Analysis</p>
+          <h3>Global Career Accelerator Projects</h3>
           <p>
-            I’ll continue adding coursework, personal projects, and development work as this
-            portfolio grows.
+            SQL and data analysis milestones focused on sustainability impact, product analytics,
+            construction job demand, and public transit ridership patterns.
+          </p>
+
+          <p class="project-note">
+            Featured project PDFs are available on my LinkedIn profile. Dedicated case study pages
+            will be added here later.
           </p>
         </article>
       </div>
@@ -87,18 +120,29 @@
       <h2>Resume</h2>
 
       <p>
-        My resume will be added here soon. For now, you can connect with me through GitHub,
-        LinkedIn, or email.
+        My resume includes my Computer Science coursework, technical skills, project work,
+        Global Career Accelerator data analysis experience, and previous work experience.
       </p>
+
+      <div class="section-actions">
+        <a class="button primary" href="resume.pdf" target="_blank" rel="noopener noreferrer">
+          Open Resume PDF
+        </a>
+      </div>
     </section>
 
     <section id="contact" class="section">
       <h2>Contact</h2>
 
+      <p>
+        I’m currently looking for internships, entry-level opportunities, and projects where I can
+        keep growing as a developer and contribute to real technical work.
+      </p>
+
       <div class="contact-links">
-        <a href="mailto:wjm32001@gmail.com">Email</a>
+        <a href="mailto:WilliamJMooreIIICareer@proton.me">Email</a>
         <a href="https://github.com/Wjmoore32001" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
       </div>
     </section>
   </main>
