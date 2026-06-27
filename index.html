@@ -62,6 +62,14 @@
       color: #94a3b8;
     }
 
+    .email-box {
+      background: #111111;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 0.75rem;
+      padding: 1rem;
+      display: inline-block;
+    }
+
     .btn-outline-light:hover {
       color: #050505;
     }
@@ -101,7 +109,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-9 col-xl-8">
-            <p class="text-accent fw-bold text-uppercase letter-spacing mb-3">
+            <p class="text-accent fw-bold text-uppercase mb-3">
               Computer Science Senior
             </p>
 
@@ -122,10 +130,6 @@
 
               <a class="btn btn-outline-light btn-lg fw-bold" href="https://github.com/Wjmoore32001" target="_blank" rel="noopener noreferrer">
                 GitHub
-              </a>
-
-              <a class="btn btn-outline-light btn-lg fw-bold" href="mailto:WilliamJMooreIIICareer@proton.me">
-                Email Me
               </a>
             </div>
           </div>
@@ -254,10 +258,15 @@
               keep growing as a developer and contribute to real technical work.
             </p>
 
-            <div class="d-flex flex-wrap gap-3 mt-3">
-              <a class="btn btn-outline-light fw-bold" href="mailto:WilliamJMooreIIICareer@proton.me">
-                Email
-              </a>
+            <div class="email-box mt-3 mb-4">
+              <p class="small-muted mb-1">Email</p>
+              <p class="fw-bold mb-0" id="emailText">WilliamJMooreIIICareer@proton.me</p>
+            </div>
+
+            <div class="d-flex flex-wrap gap-3">
+              <button class="btn btn-primary fw-bold" type="button" id="copyEmailButton">
+                Copy Email
+              </button>
 
               <a class="btn btn-outline-light fw-bold" href="https://github.com/Wjmoore32001" target="_blank" rel="noopener noreferrer">
                 GitHub
@@ -267,6 +276,8 @@
                 Resume
               </a>
             </div>
+
+            <p class="small-muted mt-3 mb-0" id="copyStatus" aria-live="polite"></p>
           </div>
         </div>
       </div>
@@ -280,6 +291,21 @@
       </p>
     </div>
   </footer>
+
+  <script>
+    const copyButton = document.getElementById("copyEmailButton");
+    const emailText = document.getElementById("emailText");
+    const copyStatus = document.getElementById("copyStatus");
+
+    copyButton.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(emailText.textContent);
+        copyStatus.textContent = "Email copied to clipboard.";
+      } catch (error) {
+        copyStatus.textContent = "Could not copy automatically. You can manually select and copy the email above.";
+      }
+    });
+  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
